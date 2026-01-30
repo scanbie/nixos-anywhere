@@ -452,7 +452,7 @@ parseArgs() {
     fi
 
     # Support .#foo shorthand
-    if [[ $flakeAttr != nixosConfigurations.* ]]; then
+    if [[ $flakeAttr != *.* ]]; then
       flakeAttr="nixosConfigurations.\"$flakeAttr\".config"
     fi
   fi
